@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+h1{
+  font-weight: 700;
+  color: rgb(167, 39, 39);
+  border-radius: 5px;
+  background-image: linear-gradient(to right,red,green,yellow,blue);
+}
+.main-box{
+  width: 206px;
+  height: 206px;
+  /* border: 3px solid rgba(82, 108, 163, 0.822); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background-color: darkgray; */
+  animation-name: myAnimation;
+  animation-duration: 6s;
+  animation-iteration-count: 10;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-delay: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.box{
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+}
+.red-box{
+  background-color: red;
+  animation-name: red-anime;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+.green-box{
+  background-color: green;
+  animation-name: green-anime;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+.yellow-box{
+  background-color: yellow;
+  animation-name: yellow-anime;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+.blue-box{
+  background-color: blue;
+  animation-name: blue-anime;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+@keyframes red-anime {
+  0%{
+    transform: translate(0,0);
+    background-color: red;
+  }
+  25%{
+    transform: translate(100px,0);
+    background-color: green;
+  }
+  50%{
+    transform: translate(100px,100px);
+    background-color: yellow;
+  }
+  75%{
+    transform: translate(0,100px);
+    background-color: blue;
+  }
+  100%{
+    transform: translate(0,0);
+    background-color: red;
+  }
+}
+@keyframes green-anime {
+  0%{
+    transform: translate(0,0);
+    background-color: green;
+  }
+  25%{
+    transform: translate(0,100px);
+    background-color: yellow;
+  }
+   50%{
+    transform: translate(-100px,100px);
+    background-color: blue;
+  } 
+  75%{
+    transform: translate(-100px,0);
+    background-color: red;
+  }
+  100%{
+    transform: translate(0,0);
+    background-color: green;
+  }
+}
+@keyframes yellow-anime {
+  0%{
+    transform: translate(0,0);
+    background-color: yellow;
+  }
+  25%{
+    transform: translate(-100px,0);
+    background-color: blue;
+  }
+  50%{
+    transform: translate(-100px,-100px);
+    background-color: red;
+  }
+  75%{
+    transform: translate(0,-100px);
+    background-color: green;
+  }
+  100%{
+    transform: translate(0,0);
+    background-color: yellow;
+  }
+}
+@keyframes blue-anime {
+  0%{
+    transform: translate(0,0);
+    background-color: blue;
+  }
+  25%{
+    transform: translate(0,-100px);
+    background-color: red;
+  }
+  50%{
+    transform: translate(100px,-100px);
+    background-color: green;
+  }
+  75%{
+    transform: translate(100px,0);
+    background-color: yellow;
+  }
+  100%{
+    transform: translate(0,0);
+    background-color: blue;
+  }
+}
